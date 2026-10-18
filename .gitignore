@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+*.db
+*.db-*
+*.log
+backups/
+config/*.toml
+!config/*.example.toml
+config/*.env
+*.db.lock

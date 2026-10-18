@@ -1,0 +1,20 @@
+# One config per bot. Copy to anna.toml, maria.toml, etc.
+# Env vars with the same UPPER_CASE names override these values.
+bot_token = "8878169571:AAGTCKHt1kQ3t4KViJZXz5lqrUCUsxGN-TM"
+bot_username = "Prostitutkam_piss"
+master_id = 8878169571
+master_name = "Анна"
+timezone = "Europe/Moscow"
+approval_minutes = 120
+break_minutes = 20
+lead_minutes = 60
+step_minutes = 30
+overtime = true
+
+caldav_url = "https://caldav.yandex.ru"
+caldav_username = "anna@yandex.ru"
+# Separate Yandex app password with Calendar (CalDAV) access, not account password.
+caldav_password = ""
+# Create both calendars in Yandex first. Exact names or full CalDAV collection URLs.
+hours_calendar = "Рабочие часы"
+bookings_calendar = "Записи"

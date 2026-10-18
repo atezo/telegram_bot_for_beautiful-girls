@@ -1,0 +1,25 @@
+# One Compose stack, one independent container + persistent volume per master.
+# Copy the bot-anna block and use another config/volume to add a master.
+services:
+  bot-anna:
+    build: .
+    restart: unless-stopped
+    environment:
+      CONFIG_FILE: /config/config.toml
+      DATABASE_URL: sqlite:////data/booking.db
+    volumes:
+      - ./config/anna.toml:/config/config.toml:ro
+      - anna_data:/data
+  bot-maria:
+    build: .
+    restart: unless-stopped
+    profiles: [maria]
+    environment:
+      CONFIG_FILE: /config/config.toml
+      DATABASE_URL: sqlite:////data/booking.db
+    volumes:
+      - ./config/maria.toml:/config/config.toml:ro
+      - maria_data:/data
+volumes:
+  anna_data:
+  maria_data:

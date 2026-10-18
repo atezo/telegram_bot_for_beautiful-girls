@@ -1,0 +1,11 @@
+.env
+.venv
+.git
+__pycache__
+.pytest_cache
+*.db
+*.db-*
+tests
+backups
+config
+*.db.lock
